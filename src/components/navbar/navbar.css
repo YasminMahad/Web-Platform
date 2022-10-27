@@ -1,0 +1,64 @@
+.navbar {
+    width: 100%;
+    background-color: #1b3159;
+    justify-content: flex-end;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: fixed;
+    font-family: Inter;
+    font-size: 1 rem;
+    font-weight: 400;
+    display: flex;
+  }
+
+  .navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+
+  .navbar  a:hover {
+    background-color: #f2f2f2;
+    color: #1b3159;
+  }
+  
+  .home {
+    color: #f2f4f8;
+
+  }
+  
+  .about {
+    color: #f2f4f8;
+    margin-left: 50px;
+  }
+  
+  .contact {
+    color: #f2f4f8;
+    margin-left: 50px;
+  }
+
+  .btnSignup {
+    border: none;
+    color: #f2f4f8;
+    padding: 5px 26px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0px 16px 0px 50px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  .btn {
+    background-color: #f2f4f8; 
+    color: #1b3159; 
+    border: 2px solid #f2f4f8;
+  }
+  
+  .btn:hover {
+    background-color: #4CAF50;
+    color: #f2f4f8;
+  }
+  
