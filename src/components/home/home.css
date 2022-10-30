@@ -1,4 +1,3 @@
-
 .section1 {
     color: #000;
     background-color: #fff;
@@ -25,10 +24,6 @@
     margin-left: 14px;
     font-size: 4.563rem;
   }
-  .how-works {
-    color: #599ccf;
-    font-size: 4.563rem;
-  }
   
   .text {
     line-height: 28px;
@@ -46,12 +41,8 @@
   
 
   .section2 {
-    color: #2c4c6b;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
+    background-color: #1b3159;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
     padding-bottom: 6px;
     padding-right: 68px;
@@ -61,65 +52,83 @@
     line-height: 28px;
     padding: 5%;
   }
-  
-  .main-container2 {
-    color: #000;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;
-    display: flex;
-    margin-left: 7%;
-  }
-  
-  .register {
-    color: #2c4c6b;
-    margin-bottom: 70px;
-  }
-  
-  .register-2-removebg-p {
-    width: 301px;
-    height: 167px;
-    object-fit: cover;
-    background-position: center;
-    background-size: cover;
-  }
-  
- 
-  
-  .make-your-payment {
-    font-weight: 700;
-  }
-  
-  .sendout-removebg-pre {
-    width: 275px;
-    height: 183px;
-    object-fit: cover;
-    background-position: center;
-    background-size: cover;
-    margin-top: 3px;
-  }
-  
   .how-works{
     margin-top: 7%;
-    margin-bottom: 7%;
+    margin-bottom: 10%;
     justify-items: center;
     text-align: center;
     margin-right: 5%;
+    color: #599ccf;
+    font-size: 4.563rem;
   }
   .how-it-works{
     display: flex;
     margin-top: 3%;
   }
-  .work-1{
+  .work-1, .work-2, .work-3{
+    margin-bottom: 60px;
     margin-left: 10%;
-  }
-  .work-2{
-    margin-left: 10%;
-  }
-  .work-3{
-    margin-left: 10%;
-
   }
 
+  .color-block {
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  .section3 {
+    display: flex;
+    background-color: #fff;
+    margin-top: 30px;
+  }
+
+ .container-form{
+    background-color: #1b3159;
+    border-radius: 5px;
+    width: 650px;
+    padding: 120px;
+}
+form {
+  padding-left: 130px;
+  margin-top: 100px;
+}
+
+form input{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  
+}
+.contactus{
+  color: #599ccf;
+  background-color: #fff;
+  padding: 50px;
+  padding-left: 100px;
+}
+.contactus h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 4rem;
+}
+.textarea {
+  height: 150px;
+}
+.submit {
+  border: none;
+  color: #f2f4f8;
+  text-align: center;
+  font-size: 16px;
+  background-color: rgb(53, 141, 53);
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+/* .contactimg{
+  margin-left: 200px;
+} */
 
   

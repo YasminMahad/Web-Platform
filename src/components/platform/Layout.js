@@ -1,4 +1,7 @@
 import React from 'react'
+import Header from './Header'
+import Sidebar from './Sidebar'
+import Transaction from './Transaction'
 
 function Layout() {
     return (
@@ -15,7 +18,7 @@ function Layout() {
 
                 
                 <main className='content'>
-                    <Outlet />
+                    <Transaction />
                 </main>
             </section>
         </div>

@@ -1,16 +1,22 @@
-import React, { useState, setState } from 'react'
+import React, { useState } from 'react'
 import './signup.css'
-// import Signup from '../signup/Signup'
+import { Link } from 'react-router-dom';
+import { db } from '../Firebase'
+import { collection, addDoc } from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useHistory } from "react-router-dom";
 
-// import { database } from '../Firebase'
-// import { ref, push, child, update } from "firebase/database";
 
-const Signup = () => {
+
+
+function Signup() {
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
+  const history = useHistory()
+
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -32,53 +38,69 @@ const Signup = () => {
 
   }
 
-  const handleSubmit = () => {
-    let obj = {
+
+  const saveData = () => {
+    addDoc(collection(db, "user"), {
       firstName: firstName,
       lastName: lastName,
-      email: email,
-      password: password,
-      confirmPassword: confirmPassword,
-    }
-  //   const newPostKey = push(child(ref(database), 'posts')).key;
-  //   const updates = {};
-  //   updates['/' + newPostKey] = obj
-  //   return update(ref(database), updates);
+      email: email
+    })
+      .then(() => (  
+      history.push("/platform")  
+      // console.log("Data saved successfully")
+      ))
+      .catch(error => console.log(error))
+  }
+
+  const handleSubmit = () => {
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        saveData()
+      })
+      .catch((error) => {
+        console.log(error)
+      });
+      
   }
 
   return (
     <div className="form">
+      <h1>Register</h1>
       <div className="form-body">
         <div className="username">
           <label className="form__label" for="firstName">First Name </label>
-          <input className="form__input" type="text" value={firstName} onChange={(e) => handleInputChange(e)} id="firstName" placeholder="First Name" />
+          <input className="form__input" type="text" value={firstName} onChange={(e) => handleInputChange(e)} id="firstName"  />
 
         </div>
         <div className="lastname">
           <label className="form__label" for="lastName">Last Name </label>
-          <input type="text" name="" id="lastName" value={lastName} className="form__input" onChange={(e) => handleInputChange(e)} placeholder="LastName" />
+          <input type="text" name="" id="lastName" value={lastName} className="form__input" onChange={(e) => handleInputChange(e)}  />
         </div>
         <div className="email">
           <label className="form__label" for="email">Email </label>
-          <input type="email" id="email" className="form__input" value={email} onChange={(e) => handleInputChange(e)} placeholder="Email" />
+          <input type="email" id="email" className="form__input" value={email} onChange={(e) => handleInputChange(e)}  />
         </div>
         <div className="password">
           <label className="form__label" for="password">Password </label>
-          <input className="form__input" type="password" id="password" value={password} onChange={(e) => handleInputChange(e)} placeholder="Password" />
+          <input className="form__input" type="password" id="password" value={password} onChange={(e) => handleInputChange(e)} />
         </div>
         <div className="confirm-password">
           <label className="form__label" for="confirmPassword">Confirm Password </label>
-          <input className="form__input" type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => handleInputChange(e)} placeholder="Confirm Password" />
+          <input className="form__input" type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => handleInputChange(e)} />
         </div>
       </div>
-      <div class="footer">
-        <button onClick={() => handleSubmit()} type="submit" class="btn">Register</button>
+      <div className="link">
+        <Link to="/signup">
+          <button onClick={handleSubmit} type="submit" class="btn"> Register</button>
+        </Link>
       </div>
-      {/* export const database = getDatabase(app); */}
     </div>
-    
+
   )
-  
+
 }
 
 export default Signup

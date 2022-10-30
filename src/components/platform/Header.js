@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css'
 
 function Header() {
     return (
@@ -7,9 +8,7 @@ function Header() {
             <div id="head">
                 <h1>Welcome to Quick Transfer</h1>
             </div>
-            {/* <div >
-                <input className="search" type="text" placeholder="Search" />
-            </div> */}
+           
         </div>
 
     )

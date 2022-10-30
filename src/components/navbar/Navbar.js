@@ -1,35 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './navbar.css'
-// import { Routes, Route, useNavigate } from 'react-router-dom';
-import Signup from '../signup/Signup';
+
+// import Login from '../login/Login';
+
 
 
 
 const Navbar = () => {
-    // const navigate = useNavigate();
 
-    // const navigateToSignup = () => {
-    //     // 👇️ navigate to /contacts
-    //     navigate('./Signup');
-    // };
 
-    // const navigateHome = () => {
-    //   // 👇️ navigate to /
-    //   navigate('/');
-    // };
+    
     return (
         <div className="navbar navhover">
-            <a href="#home" className="home">Home</a>
+            <Link to="/home">Home</Link>
             <a href="#about" className="about">How it Works</a>
             <a href="#contact" className="contact">Contact</a>
 
             <div>
-                <button className='btnSignup btn'>Sign Up</button>
-
-                {/* <Routes>
-                    <Route path="./Signup" element={<Signup />} />
-                    
-                </Routes> */}
+            <Link to="/signup" className='btnSignup btn'>Signup</Link>
+            <Link to="/login" className='btnSignup btn'>Login</Link>
+  
             </div>
 
         </div>
@@ -37,3 +28,30 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {/* <Link to="./signup"  className='btnSignup btn'>Signup</Link> */}

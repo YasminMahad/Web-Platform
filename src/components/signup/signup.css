@@ -1,35 +1,52 @@
-body{
-    background: #bdc3c7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 .form{
-    background-color: white;
+    background-color: #e8ebf1;
     border-radius: 5px;
-    width: 550px;
-    margin: 20px auto;
-    padding: 20px;
+    width: 50%;
+    padding-top: 170px;
+    /* padding: 20px; */
+    margin-left: 500px;
     /* height: 600px; */
+}
+.form h1 {
+    text-align: center;
+    color: #599ccf;
 }
 
 .form-body{
-    text-align: left;
-    padding: 20px 10px;
+    /* text-align: left; */
+    padding: 75px;
+    /* padding: 5px; */
+    
+
+}
+.form-body label{
+    padding-right: 40px;
 }
 
-.form-body > *{
-    padding: 5px;
-}
-
-.form__label{
-    width: 40%;
-}
-
-.form_input{
-    width: 60%;
+.form-body input{
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    
 }
 
 .footer{
     text-align: center;
 }
+
+button {
+    border: 2px solid #1b3159;
+    /* color: #f2f4f8; */
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0px 16px 10px 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-left: 400px;
+  }

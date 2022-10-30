@@ -41,17 +41,17 @@
   }
 
   .btnSignup {
-    border: none;
-    color: #f2f4f8;
+    border: 2px solid white;
+    /* color: #f2f4f8; */
     padding: 5px 26px;
     text-align: center;
     font-size: 16px;
-    margin: 0px 16px 0px 50px;
+    margin: 0px 16px 10px 50px;
     cursor: pointer;
     border-radius: 50px;
   }
 
-  .btn {
+  /* .btn {
     background-color: #f2f4f8; 
     color: #1b3159; 
     border: 2px solid #f2f4f8;
@@ -60,5 +60,5 @@
   .btn:hover {
     background-color: #4CAF50;
     color: #f2f4f8;
-  }
+  } */
   
