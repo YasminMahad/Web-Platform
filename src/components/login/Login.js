@@ -5,7 +5,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useHistory } from "react-router-dom";
 
 
-function Signup() {
+function Login() {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const history = useHistory()
@@ -62,4 +62,4 @@ function Signup() {
 
 }
 
-export default Signup
+export default Login

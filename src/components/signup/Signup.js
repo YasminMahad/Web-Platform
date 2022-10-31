@@ -75,7 +75,7 @@ function Signup() {
 
         </div>
         <div className="lastname">
-          <label className="form__label" htmlFor="lastName">Last Name </label>
+          <label className="formlabel" htmlFor="lastName">Last Name </label>
           <input type="text" name="" id="lastName" value={lastName} className="form__input" onChange={(e) => handleInputChange(e)} placeholder="Input your last name" />
         </div>
         <div className="email">
