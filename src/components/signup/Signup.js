@@ -7,8 +7,6 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useHistory } from "react-router-dom";
 
 
-
-
 function Signup() {
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
@@ -43,10 +41,11 @@ function Signup() {
     addDoc(collection(db, "user"), {
       firstName: firstName,
       lastName: lastName,
-      email: email
+      email: email,
+      password:password,
     })
       .then(() => (  
-      history.push("/platform")  
+      history.push("/login")  
       // console.log("Data saved successfully")
       ))
       .catch(error => console.log(error))
@@ -71,25 +70,25 @@ function Signup() {
       <h1>Register</h1>
       <div className="form-body">
         <div className="username">
-          <label className="form__label" for="firstName">First Name </label>
-          <input className="form__input" type="text" value={firstName} onChange={(e) => handleInputChange(e)} id="firstName"  />
+          <label className="form__label" htmlFor="firstName">First Name </label>
+          <input className="form__input" type="text" value={firstName} onChange={(e) => handleInputChange(e)} id="firstName"  placeholder="Input your first name"/>
 
         </div>
         <div className="lastname">
-          <label className="form__label" for="lastName">Last Name </label>
-          <input type="text" name="" id="lastName" value={lastName} className="form__input" onChange={(e) => handleInputChange(e)}  />
+          <label className="form__label" htmlFor="lastName">Last Name </label>
+          <input type="text" name="" id="lastName" value={lastName} className="form__input" onChange={(e) => handleInputChange(e)} placeholder="Input your last name" />
         </div>
         <div className="email">
-          <label className="form__label" for="email">Email </label>
-          <input type="email" id="email" className="form__input" value={email} onChange={(e) => handleInputChange(e)}  />
+          <label className="form__label" htmlFor="email">Email </label>
+          <input type="email" id="email" className="form__input" value={email} onChange={(e) => handleInputChange(e)}  placeholder="Input your email"/>
         </div>
         <div className="password">
-          <label className="form__label" for="password">Password </label>
-          <input className="form__input" type="password" id="password" value={password} onChange={(e) => handleInputChange(e)} />
+          <label className="form__label" htmlFor="password">Password </label>
+          <input className="form__input" type="password" id="password" value={password} onChange={(e) => handleInputChange(e)} placeholder="Input atleast 6 characters"/>
         </div>
         <div className="confirm-password">
-          <label className="form__label" for="confirmPassword">Confirm Password </label>
-          <input className="form__input" type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => handleInputChange(e)} />
+          <label className="form__label" htmlFor="confirmPassword">Confirm Password </label>
+          <input className="form__input" type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => handleInputChange(e)} placeholder="Confirm your password"/>
         </div>
       </div>
       <div className="link">

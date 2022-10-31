@@ -3,9 +3,7 @@
     border-radius: 5px;
     width: 50%;
     padding-top: 170px;
-    /* padding: 20px; */
     margin-left: 500px;
-    /* height: 600px; */
 }
 .form h1 {
     text-align: center;
@@ -13,9 +11,7 @@
 }
 
 .form-body{
-    /* text-align: left; */
     padding: 75px;
-    /* padding: 5px; */
     
 
 }
@@ -41,7 +37,6 @@
 
 button {
     border: 2px solid #1b3159;
-    /* color: #f2f4f8; */
     padding: 5px 20px;
     text-align: center;
     font-size: 16px;

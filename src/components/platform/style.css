@@ -1,105 +1,49 @@
-/*Header*/
-.head{
-    display: flex;
-    
-  }
-  #head{
-    margin-top: 20px;
-    margin-left: 100px;
-    font-size: 20px;
-  }
-  .search{
-    background-color: rgb(240, 243, 245);
-    margin-left: 300px;
-    padding-left: 30px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 15px;
-    margin-top: 15px;
-  }
-  #logo{
-    margin-left: 50px;
-    margin-top: 30px;
-    width: 100px;
-  }
+.form{
+  background-color: #e8ebf1;
+  border-radius: 5px;
+  width: 50%;
+  padding-top: 170px;
+  margin-left: 500px;
+}
 
-  *{
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-  }
+.form-body{
+  padding: 75px;
+  /* padding: 5px; */
   
-  body{
-    background: #f5f5f7;
-  }
-  .navbar{
-    text-decoration: none;
-    list-style: none;
-    padding: 20%;
+
+}
+.form-body label{
+  padding-right: 40px;
+}
+
+.form-body input{
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
   
-  }
-  #dash:hover{
-    text-decoration: none;
-    margin-top: -15%;
-  }
-  
-  
-  ul a  {
-  
-    margin-left: 30px;
-     line-height: 4pc;
-     color: white;
-     font-size:20px ;
-  }
-  #first:hover{
-    color: white;
-    background-color: #102403;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  #second:hover{
-    color: white;
-    background-color: #102403;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  #third:hover{
-    color: white;
-    background-color: #102403;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  #fourth:hover{
-    color: white;
-    background-color: #102403;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  
-  
-  .navbar ul li a:hover,
-  .navbar ul li a.active{
-    color: #0c7db1;
-  
-    background:#397907,
-  
-    /* border-right: 2px solid rgb(5, 68, 104); */
-  }
-  
-  .navbar ul li a:hover:before,
-  .navbar ul li a.active:before{
-    display: block;
-    color: rgb(113, 142, 167);
-  }
+}
+
+.footer{
+  text-align: center;
+}
+
+button {
+  border: 2px solid #1b3159;
+  /* color: #f2f4f8; */
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  margin: 0px 16px 10px 50px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-left: 400px;
+}
+.form h2 {
+  text-align: center;
+  color: #599ccf;
+}

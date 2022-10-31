@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css'
 
-// import Login from '../login/Login';
-
 
 
 
@@ -50,8 +48,3 @@ export default Navbar
 
 
 
-
-
-
-
-                {/* <Link to="./signup"  className='btnSignup btn'>Signup</Link> */}

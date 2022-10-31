@@ -1,5 +1,4 @@
 
-// import Navbar from '../navbar/Navbar'
 import Img from '../../images/home.png'
 import Register from '../../images/register.png'
 import Payment from '../../images/pay1.png'
@@ -9,8 +8,6 @@ import './home.css'
 const Home = () => {
   return (
     <>
-      {/* <Navbar /> */}
-
       <div className="section1">
         <div className="main-container">
           <span className="quick-transfer">Quick Transfer </span>
