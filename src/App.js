@@ -11,9 +11,12 @@ function App() {
   return (
 
     <div className="App">
+      {/* <Home />
+      <Navbar /> */}
 
       <BrowserRouter> 
       <Navbar />
+      
       
       <Switch>
       <Route path ='/home' component={ Home } />   

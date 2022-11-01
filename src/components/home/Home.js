@@ -8,7 +8,7 @@ import './home.css'
 const Home = () => {
   return (
     <>
-      <div className="section1">
+      <div className="section1" id='home'>
         <div className="main-container">
           <span className="quick-transfer">Quick Transfer </span>
           <span className="text">
@@ -22,7 +22,7 @@ const Home = () => {
       </div>
       {/* section 2 */}
 
-      <div className="section2">
+      <div className="section2" id='about'>
 
         <div className='color-block'>
           <div>
@@ -55,7 +55,7 @@ const Home = () => {
 
       <div className='section3'>
         
-        <div className='container-form'>
+        <div className='container-form' id='contact'>
           <form>
             <div className="username">
               <input className="form__input" id="firstName" type="text" placeholder="Name" />
